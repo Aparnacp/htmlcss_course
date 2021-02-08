@@ -1,0 +1,17 @@
+body{
+    margin:0;
+}
+
+.top-container {
+    background-color: rgb(162, 162, 233);
+}
+
+h1, p {
+        text-align: center;
+}
+
+.computer {
+    width: 200px;
+    height:150px;
+    margin: auto;
+}
