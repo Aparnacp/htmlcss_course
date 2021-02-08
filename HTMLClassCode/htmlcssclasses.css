@@ -1,0 +1,104 @@
+body {
+    margin:0;
+    padding:0;
+    /* overflow-x: hidden; */
+}
+header {
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ h1 {
+    margin: 0;
+} 
+nav {
+    width: 100%;
+    height: 50px;
+    background-color:powderblue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article {
+    width: 70%;
+    height: 300px;
+    float :left;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+aside {
+    width: 30%;
+    height: 300px;
+    float :left;
+    background-color: mediumvioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Monday 8th February Class*/
+
+table,th, td  {
+    border: 2px solid black;
+    border-collapse: collapse;
+
+    
+}
+
+th {
+    border: 2px solid black;
+    padding: 20px;
+    vertical-align: bottom;
+    height: 50px;
+}
+
+tr:nth-child(odd) 
+{
+    background-color:lightblue;
+}
+
+.boxmodel {
+    
+    padding: 10px;
+    border: 3px solid green;
+    width: 200px;
+    height: 200px;
+
+}
+ p {
+    color:  red !important ;
+}
+
+p{
+    color: blue ;
+}
+p {
+    color: green;
+} 
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+.inlineblock {
+    display: inline-block;
+}
