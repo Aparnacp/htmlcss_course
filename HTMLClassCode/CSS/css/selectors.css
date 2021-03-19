@@ -1,0 +1,160 @@
+/* element.class */
+
+ /* p.intro {
+    background-color: yellow;
+  }  */
+  /* .welcome{
+      color: red;
+  }
+
+  .name {
+      background-color: aqua;
+  } */
+
+  /* element,element */
+  /* h1, p {
+    background-color: yellow;
+  }  */
+
+  /* element element */
+  /* div p {
+    background-color: yellow;
+  }  */
+
+  /* element>element */
+
+    /* div > p {
+        background-color: yellow;
+    } */
+/* element+element */
+/* div + p {
+    background-color: yellow;
+  } */
+
+  /* Attribute Selectors   */
+  /* Selects all elements with a target attribute  */
+
+/* a[target] {
+  background-color: yellow;
+} */
+
+/* [attribute=value] Selector */
+
+/* a[target=_blank] {
+    background-color: yellow;
+  } */
+
+/* [attribute^=value] Selector */
+  /* div[class^="test"] {
+    background: #ffff00;
+  } */
+
+/*Target Pseudo Class*/ 
+  /* p:target {
+    background-color: gold;
+  } */
+  
+  /* Add a pseudo-element inside the target element */
+  /* p:target::before {
+    font: 70% sans-serif;
+    content: "►";
+    color: limegreen;
+    margin-right: .25em;
+  } */
+  
+  /* Style italic elements within the target element */
+  /* p:target i {
+    color: red;
+  }    */
+
+/* UI pseudo-classes */
+/* focus */
+
+/* input:focus {
+    background-color: yellow;
+    border: 3px solid  brown;
+  } */
+
+/* Negation Pseudo-Class   */
+
+p {
+    color: #000000;
+  }
+  
+  :not(h1) {
+    color: #ff0000;
+  }
+
+  /* Structural Pseudo Classes */
+  /* :first-child Selector */
+
+  /* p:first-child {
+    background-color: yellow;
+  } */
+
+ /* :nth-child() */
+
+  /* table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(odd){background-color:aliceblue}
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  } */
+
+  /* Pseudo Elements */
+
+  p::first-line {
+    /* background-color: yellow; */
+    color: blue;
+  }
+
+  /* p::after { 
+    content: " - Remember this";
+  } */
+
+  /*ToolTip*/
+
+  /* p {
+      color: red;
+  }
+
+  h1 {
+    display: none;
+  }
+
+  p:hover + h1{
+    display: block;
+    background-color: yellow;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+
+  } */
+
+  /*Create Multiple Columns*/
+
+  /* div {
+    column-count: 4;
+    text-align: justify;
+    
+  } */
+
+  /* h1 {
+      color: red;
+  }
+
+  h1:hover {
+      color: blue;
+  } */
