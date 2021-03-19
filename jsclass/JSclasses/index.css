@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    background-color: aliceblue;
+    padding: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+ button {
+    padding: 5px;
+    background-color: rgb(124, 136, 136);
+    color: white;
+    border-radius: 8px;
+    box-shadow: none;
+    border: 1px solid  #ccc;
+} 
+.btn-primary:focus {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: none;
+    box-shadow: none !important;
+}
+

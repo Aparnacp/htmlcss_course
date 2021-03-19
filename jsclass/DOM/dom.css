@@ -1,0 +1,15 @@
+h1 {
+  color: blue;
+  font-size: 20px;
+  text-align: center;
+}
+.heading {
+  font-style: italics;
+}
+.myStyle {
+  background-color: aqua;
+}
+
+body {
+  text-align: center;
+}

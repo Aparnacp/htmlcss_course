@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Forms</title>
+</head>
+<body>
+    <nav id="main-menu">
+        <ul id="list">
+            <li><a href="/">Home</a></li>
+            <li id="item"><a href="/about/">About us</a></li>
+            <li><a href="/contact/">Contact</a></li>
+        </ul>
+    </nav>
+    <button onclick=additemtomenu() id="menu">Add items to menu</button>
+    <button onclick=submenu() id="submenu">Add item to submenu</button>
+
+
+    <script>
+        function additemtomenu(){
+            var listitem = document.createElement("li");
+             listitem.innerHTML = `<a href="/about/team">Our Team</a>`;
+            // var text = document.createTextNode("Work");
+            // listitem.appendChild(text);
+
+            var item = document.getElementById("list");//get ul
+            item.appendChild(listitem);
+            document.getElementById("menu").style.display = "none";
+        }
+
+        function submenu(){
+        const listview = document.createElement( "ul" );
+        listview.innerHTML = `
+        <li><a href="/about/history">Company</a></li>
+        <li><a href="/about/team">The team</a></li>
+        <li><a href="/about/address">Location</a></li>`;
+        var listitem = document.getElementById("item");
+        listitem.append( listview );
+        document.getElementById("submenu").style.display = "none";
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    
+}
+
+h1 {
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}

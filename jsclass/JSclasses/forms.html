@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <h1>Forms Using JS</h1>
+    <form action="" name="formbasic" >
+        <label for="fname">Fullname:</label>
+        <input type="text" name="fname" autocomplete="on"><br></br>
+        <label for="age">Age</label>
+        <input type="number" name="age" min="1" max="10" id="age" required><br></br>
+        <label for="email">Email</label>
+        <input type="email" name="email"  ><br> <br>
+        <button type="submit" onclick="validate_name()">Submit</button>
+    </form>
+    <!-- <form name="formaddress">
+        <label for="billingaddress">Billing Address</label>
+        <input type="text" name="ba"><br><br>
+        <input type="checkbox" name="copy" onclick="copyaddress(this.form)"><br>
+        <p>Check this box if billing and shipping address are same.</p>
+        <label for="mailingaddress">Mailing Address</label>
+        <input type="text" name="ma"><br><br>
+        <button type="submit" >Submit</button>
+    </form> -->
+
+    <!-- <form action="" >
+        <input type="radio" value="yes" name="choice"> Yes
+        <input type="radio" value="no" name="choice">  No <br><br>
+        <button onclick="validate_radiobtn()" id="radiobtn">Selected Value</button>
+
+    </form> -->
+    <script>
+
+        function validate_radiobtn(){
+                var rbs = document.querySelectorAll('input[name="choice"]');
+                let rbuttonValue;
+                for(var rb of rbs) {
+                    if(rb.checked) {
+                        rbuttonvalue = rb.value;
+                        break;
+                    }
+                }alert(rbuttonValue);
+
+        }
+
+        function copyaddress(f){
+            if(f.copy.checked == true) {
+          f.ma.value = f.ba.value;
+        }
+    }
+
+        function validate_email(input) {
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            console.log(input.value);
+            if(input.value.match(mailformat)){
+                alert("email is valid");
+                return true;
+            }else {
+                x = input.value;
+                console.log(x);
+                var pos = x.indexOf("@");
+                console.log(pos);
+                if(pos === 0){
+                    alert("position of @ is not correct. Start with a letter or a number");
+                }
+                alert ("email is not valid");
+                return false;
+            }
+        }
+
+        function validate_name(input) {
+            var x = document.forms["formbasic"]["fname"].value;
+            if ( x == "" ) {
+                alert("Name must be filled out");
+                return false;
+            }else if(!(isNaN(x))) {
+                alert("Enter a string and not a number.");
+                return false;
+            }
+            else 
+                alert("Input OK.");
+        }
+
+        function validate_age(){
+            // var x = document.forms["formbasic"]["age"].value;
+            // if(isNaN(x) || x < 1 || x > 10) {
+            //     alert("Input not valid");
+            // }else 
+            //     alert("input OK");
+            
+       
+            if (document.getElementById("age").validity.rangeUnderflow) {
+                alert("Value too small");
+            }else if (document.getElementById("age").validity.rangeOverflow) {
+                alert("Value too large")
+            }
+            else 
+                alert("Input Ok");
+        }
+         
+    </script>
+</body>
+</html>

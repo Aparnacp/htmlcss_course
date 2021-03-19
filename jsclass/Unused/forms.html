@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    
+    <h1>Forms Using JS</h1>
+    <!-- <form action="" name="formbasic" >
+        <label for="fname">Fullname:</label>
+        <input type="text" name="fname" ><br></br>
+        <label for="age" >Age</label>
+        <input type="number" name="age" min="10" max="100" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email"  ><br> <br>
+        <button type="submit" onclick="validate_age()">Submit</button>
+    </form> -->
+
+    <form action="">    
+        <input type="radio" name="choice" value="true"> True <br><br>
+        <input type="radio" name="choice" value="false"> False <br><br>
+        <button type="submit" onclick="validate_radiobtn()">Radio Button Validate</button>
+    </form>
+    <script>
+        //radio button validation
+
+        function validate_radiobtn() {
+            var radiobtn = document.querySelectorAll('input[name="choice"]');
+            var buttonvalue;
+            for( var rb of radiobtn ) {
+                if(rb.checked) {
+                    buttonvalue = rb.value;
+                    break;
+                }
+            }
+                alert(buttonvalue + "Please select your option");
+            }
+
+        
+
+        //name validation
+        function validate_name() {
+            var x = document.forms["formbasic"]["fname"].value;
+            // alert(x);
+            if(x == "") {
+                    alert("Please enter your name");
+                    return false;
+            }else if(!(isNaN(x))){
+                alert("please enter a string");
+                return false;
+            }
+            else 
+                alert("Input OK.")
+
+        }
+
+        function validate_age(){
+            var x = document.forms["formbasic"]["age"].value;
+            if( x == "" || x < 10 || x > 100) {
+                alert("Age is not valid");
+                return false;
+            }else {
+                alert("Input is valid");
+            }
+        }
+
+
+        //email verification
+
+        function validate_email(input) {
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            console.log(input.value);
+            if(input.value.match(mailformat)){
+                alert("email is valid");
+                return true;
+            }else {
+                x = input.value;
+                console.log(x);
+                var pos = x.indexOf("@");
+                console.log(pos);
+                if(pos === 0){
+                    alert("position of @ is not correct. Start with a letter or a number");
+                }
+                alert ("email is not valid");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

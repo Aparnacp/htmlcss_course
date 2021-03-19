@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copyfields</title>
+</head>
+<body>
+    <!-- <script>
+    function FillBilling(f) {
+        if(f.billingtoo.checked == true) {
+          f.billingname.value = f.shippingname.value;
+          f.billingcity.value = f.shippingcity.value;
+        }
+      }
+    </script>
+    <b>Mailing Address</b>
+            <br><br>
+            <form>
+            Name:
+            <input type="text" name="shippingname">
+            <br>
+            City:
+            <input type="text" name="shippingcity">
+            <br>
+            <input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">
+            <em>Check this box if Billing Address and Mailing Address are the same.</em>
+            <P>
+            <b>Billing Address</b>
+            <br><br>
+            Name:
+            <input type="text" name="billingname">
+            <br>
+            City:
+            <input type="text" name="billingcity">
+    </form> -->
+
+     <!-- <script>
+        function change(){ 
+                var src= document.getElementById("sourceTextField"); 
+                var dest= document.getElementById("destinationTextField"); 
+                dest.value=src.value; 
+            } 
+    </script>
+    Billing Address: <input type="text" id="sourceTextField" onkeyup="change()" autocomplete/> <br /><br />
+    Mailing Address: <input type="text" id="destinationTextField" value=""/> 
+    <form action="/action_page.php" autocomplete="on">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" autocomplete="on" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autocomplete="off" required><br><br>
+        <input type="submit" value="Submit">
+    </form>  -->
+
+      <!-- Radio button selection verification -->
+      <form>
+        <input type="radio" name="choice" value="yes"> Yes
+        <input type="radio" name="choice" value="no"> No
+        <input type="button" id="btn" value="Show Selected Value">
+    </form>
+    <script>
+        const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            alert(selectedValue);
+        };
+    </script>
+
+     <!-- Validate email address in forms -->
+
+     <!-- <form name="form1" >
+        <p>Enter an email address:</p>
+        <input id='email' name="email">
+        <button type='submit' id='validate' onclick="validateEmail(document.form1.email)" required>Validate!</button>
+      </form>
+      
+      <h2 id='result'></h2>
+      <script>
+          function validateEmail(inputText)
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+// document.form1.email.focus();
+return true;
+}
+else
+{
+var x=document.form1.email.value;  
+console.log(x);
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+alert("Please enter a valid e-mail address \n atpostion:"+atposition+" is not valid"+"\n dotposition:"+dotposition);  
+alert("You have entered an invalid email address!");
+document.form1.email.focus();
+return false;
+}
+}
+} 
+</script>-->
+      
+</body>
+</html>
